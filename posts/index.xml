@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - My New Hugo Site</title>
+        <title>All Posts - Lanhsin&#39;s blog</title>
         <link>https://lindseyyzhang.github.io/posts/</link>
-        <description>All Posts | My New Hugo Site</description>
+        <description>All Posts | Lanhsin&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 01 Sep 2023 23:19:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Why I started blogging</title>
-    <link>https://lindseyyzhang.github.io/posts/first_post/</link>
+    <link>https://lindseyyzhang.github.io/first_post/</link>
     <pubDate>Fri, 01 Sep 2023 23:19:27 &#43;0100</pubDate>
-    <author>xxxx</author>
-    <guid>https://lindseyyzhang.github.io/posts/first_post/</guid>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/first_post/</guid>
     <description><![CDATA[I always thought about starting a blog. Now that I&rsquo;ve finally done it, I want to share why.
 1. Clearing My Mind Writing helps me think clearly. It’s like organizing a messy room. By writing down my ideas, I can make better sense of them.
 2. Looking Back I&rsquo;ve been through a lot in life and school. Writing about these times lets me think about them again. It helps me see things I might have missed before.]]></description>
