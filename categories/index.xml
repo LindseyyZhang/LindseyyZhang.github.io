@@ -1,39 +1,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Category - Lanhsin&#39;s blog</title>
-        <link>https://lindseyyzhang.github.io/categories/</link>
+        <link>uildDrafts/categories/</link>
         <description>Categories - Category - Lanhsin&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>Case Studies</title>
-    <link>https://lindseyyzhang.github.io/categories/case-studies/</link>
-    <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
-    <author>Lanhsin</author>
-    <guid>https://lindseyyzhang.github.io/categories/case-studies/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Data Analysis</title>
-    <link>https://lindseyyzhang.github.io/categories/data-analysis/</link>
-    <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
-    <author>Lanhsin</author>
-    <guid>https://lindseyyzhang.github.io/categories/data-analysis/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Technology</title>
-    <link>https://lindseyyzhang.github.io/categories/technology/</link>
-    <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
-    <author>Lanhsin</author>
-    <guid>https://lindseyyzhang.github.io/categories/technology/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>reflection</title>
-    <link>https://lindseyyzhang.github.io/categories/reflection/</link>
-    <pubDate>Fri, 01 Sep 2023 23:19:27 &#43;0100</pubDate>
-    <author>Lanhsin</author>
-    <guid>https://lindseyyzhang.github.io/categories/reflection/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="uildDrafts/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>
