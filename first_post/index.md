@@ -19,6 +19,8 @@ The internet is a big place. My blog is my own small space where I can say what 
 
 ---
 
-This blog is my way to think, learn, and grow. It’s a place where I can share my stories and listen to yours. I hope you enjoy it as much as I do. Let’s go on this journey together.**
+This blog is my way to think, learn, and grow. 
+
+It’s a place where I can share my stories and listen to yours. I hope you enjoy it as much as I do. Let’s go on this journey together.
 
 
