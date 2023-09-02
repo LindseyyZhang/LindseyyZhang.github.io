@@ -1,7 +1,55 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - Tag - Lanhsin&#39;s blog</title>
-        <link>uildDrafts/tags/</link>
+        <link>https://lindseyyzhang.github.io/tags/</link>
         <description>Tags - Tag - Lanhsin&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="uildDrafts/tags/" rel="self" type="application/rss+xml" /></channel>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Deloitte</title>
+    <link>https://lindseyyzhang.github.io/tags/deloitte/</link>
+    <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/deloitte/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>LogisticAI</title>
+    <link>https://lindseyyzhang.github.io/tags/logisticai/</link>
+    <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/logisticai/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Risk Assessment</title>
+    <link>https://lindseyyzhang.github.io/tags/risk-assessment/</link>
+    <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/risk-assessment/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>academic paper</title>
+    <link>https://lindseyyzhang.github.io/tags/academic-paper/</link>
+    <pubDate>Fri, 01 Sep 2023 21:10:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/academic-paper/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>blog</title>
+    <link>https://lindseyyzhang.github.io/tags/blog/</link>
+    <pubDate>Thu, 31 Aug 2023 23:19:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/blog/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>mindfulness</title>
+    <link>https://lindseyyzhang.github.io/tags/mindfulness/</link>
+    <pubDate>Thu, 31 Aug 2023 23:19:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/mindfulness/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

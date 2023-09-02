@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>master - Category - Lanhsin&#39;s blog</title>
+        <link>https://lindseyyzhang.github.io/categories/master/</link>
+        <description>master - Category - Lanhsin&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 01 Sep 2023 21:10:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/categories/master/" rel="self" type="application/rss+xml" /><item>
+    <title>Bitcoin: A Peer-to-Peer Electronic Cash System</title>
+    <link>https://lindseyyzhang.github.io/third_post/</link>
+    <pubDate>Fri, 01 Sep 2023 21:10:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/third_post/</guid>
+    <description><![CDATA[In March 2022, I studied Nakamoto&rsquo;s (2008) paper on Bitcoin during my Ethereum class. Before this, I though Bitcoin was just a way to make quick money. But after reading and learning it, I saw how special it was for the peer-to-peer transactions.
+I was faced with the challenge of understanding its intricate system. But as I delved deeper, I was able to dissect and simplify these complexities piece by piece.]]></description>
+</item>
+</channel>
+</rss>
