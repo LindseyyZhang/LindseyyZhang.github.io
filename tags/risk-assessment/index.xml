@@ -1,9 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Risk Assessment - Tag - Lanhsin&#39;s blog</title>
+        <title>risk assessment - Tag - Lanhsin&#39;s blog</title>
         <link>https://lindseyyzhang.github.io/tags/risk-assessment/</link>
-        <description>Risk Assessment - Tag - Lanhsin&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/tags/risk-assessment/" rel="self" type="application/rss+xml" /><item>
+        <description>risk assessment - Tag - Lanhsin&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>lanhsin369@outlook.com (Lanhsin)</managingEditor>
+            <webMaster>lanhsin369@outlook.com (Lanhsin)</webMaster><lastBuildDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/tags/risk-assessment/" rel="self" type="application/rss+xml" /><item>
     <title>Deloitte Virtual Risk Analysis Project</title>
     <link>https://lindseyyzhang.github.io/second_post/</link>
     <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>

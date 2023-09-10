@@ -3,7 +3,19 @@
         <title>All Posts - Lanhsin&#39;s blog</title>
         <link>https://lindseyyzhang.github.io/posts/</link>
         <description>All Posts | Lanhsin&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>lanhsin369@outlook.com (Lanhsin)</managingEditor>
+            <webMaster>lanhsin369@outlook.com (Lanhsin)</webMaster><lastBuildDate>Sat, 09 Sep 2023 21:51:50 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Three Days Without My Laptop</title>
+    <link>https://lindseyyzhang.github.io/fouth_post/</link>
+    <pubDate>Sat, 09 Sep 2023 21:51:50 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/fouth_post/</guid>
+    <description><![CDATA[Three days ago, my laptop, which I&rsquo;ve used faithfully for nearly six years, ran into technical issues. Upon starting it up, I was met with the message:
+&ldquo;To interrupt normal startup, press enter.&rdquo;
+Given my affinity for technology, I saw this as an opportunity to delve deeper into the workings of my laptop.
+After some independent research, I discovered others had faced similar issues. Their solution was to access the BIOS system, adjust the optimized defaults, and then restart.]]></description>
+</item>
+<item>
     <title>Deloitte Virtual Risk Analysis Project</title>
     <link>https://lindseyyzhang.github.io/second_post/</link>
     <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
