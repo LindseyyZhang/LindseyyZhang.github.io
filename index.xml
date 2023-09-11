@@ -7,6 +7,18 @@
             <webMaster>lanhsin369@outlook.com (Lanhsin)</webMaster><lastBuildDate>Sat, 09 Sep 2023 21:51:50 &#43;0100</lastBuildDate>
             <atom:link href="https://lindseyyzhang.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Make Blogging Great Again</title>
+    <link>https://lindseyyzhang.github.io/first_post/</link>
+    <pubDate>Thu, 31 Aug 2023 23:19:27 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/first_post/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/blog.jpeg" referrerpolicy="no-referrer">
+            </div>I&rsquo;ve wanted to start a blog for a long time, my own little space on the internet where I can just be myself. But it&rsquo;s more than that. Blogging is like creating your own digital identity, a place where you are not controlled by tricky social media rules.
+In the following section, I will try my best to persuade you to join me in this blogging journey.
+Discovering Meaning in Sharing You know, there&rsquo;s this idea that many of us live by, something like, &ldquo;If you don&rsquo;t capture it, it&rsquo;s as if you&rsquo;ve never been there; if you don&rsquo;t tag it, it&rsquo;s as if you&rsquo;ve never seen, played, or read it; if you don&rsquo;t share it, it&rsquo;s as if you&rsquo;ve never done it.]]></description>
+</item>
+<item>
     <title>Three Days Without My Laptop</title>
     <link>https://lindseyyzhang.github.io/fouth_post/</link>
     <pubDate>Sat, 09 Sep 2023 21:51:50 &#43;0100</pubDate>
@@ -23,7 +35,9 @@ After some independent research, I discovered others had faced similar issues. T
     <pubDate>Sat, 02 Sep 2023 13:19:27 &#43;0100</pubDate>
     <author>Lanhsin</author>
     <guid>https://lindseyyzhang.github.io/second_post/</guid>
-    <description><![CDATA[Enrolling in Forge&rsquo;s Virtual Program was driven by my passion to delve deep into the intricacies of data analysis, especially within the context of real-world applications. The program provided a platform to not only refine my analytical skills but also understand the tangible impact data-driven insights can have on businesses.
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/deloitte.jpg" referrerpolicy="no-referrer">
+            </div>Enrolling in Forge&rsquo;s Virtual Program was driven by my passion to delve deep into the intricacies of data analysis, especially within the context of real-world applications. The program provided a platform to not only refine my analytical skills but also understand the tangible impact data-driven insights can have on businesses.
 Throughout this journey, I acquired a holistic perspective on data processing, from sourcing and cleaning data to deriving actionable insights and visualizing them in a manner that&rsquo;s both comprehensible and actionable for stakeholders.]]></description>
 </item>
 <item>
@@ -34,16 +48,6 @@ Throughout this journey, I acquired a holistic perspective on data processing, f
     <guid>https://lindseyyzhang.github.io/third_post/</guid>
     <description><![CDATA[In March 2022, I studied Nakamoto&rsquo;s (2008) paper on Bitcoin during my Ethereum class. Before this, I though Bitcoin was just a way to make quick money. But after reading and learning it, I saw how special it was for the peer-to-peer transactions.
 I was faced with the challenge of understanding its intricate system. But as I delved deeper, I was able to dissect and simplify these complexities piece by piece.]]></description>
-</item>
-<item>
-    <title>Why I started blogging</title>
-    <link>https://lindseyyzhang.github.io/first_post/</link>
-    <pubDate>Thu, 31 Aug 2023 23:19:27 &#43;0100</pubDate>
-    <author>Lanhsin</author>
-    <guid>https://lindseyyzhang.github.io/first_post/</guid>
-    <description><![CDATA[I always thought about starting a blog. Now that I&rsquo;ve finally done it, I want to share why.
-1. Clearing My Mind Writing helps me think clearly. It’s like organizing a messy room. By writing down my ideas, I can make better sense of them.
-2. Looking Back I&rsquo;ve been through a lot in life and school. Writing about these times lets me think about them again. It helps me see things I might have missed before.]]></description>
 </item>
 </channel>
 </rss>
