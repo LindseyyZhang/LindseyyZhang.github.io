@@ -1,10 +1,26 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - Lanhsin&#39;s blog</title>
+        <title>Tags - Tag - Lansin&#39;s blog</title>
         <link>https://lindseyyzhang.github.io/tags/</link>
-        <description>Tags - Tag - Lanhsin&#39;s blog</description>
+        <description>Tags - Tag - Lansin&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>lanhsin369@outlook.com (Lanhsin)</managingEditor>
-            <webMaster>lanhsin369@outlook.com (Lanhsin)</webMaster><lastBuildDate>Wed, 13 Sep 2023 14:19:27 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lanhsin369@outlook.com (Lanhsin)</webMaster><lastBuildDate>Wed, 25 Oct 2023 22:47:30 &#43;0100</lastBuildDate><atom:link href="https://lindseyyzhang.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>blog</title>
+    <link>https://lindseyyzhang.github.io/tags/blog/</link>
+    <pubDate>Wed, 25 Oct 2023 22:47:30 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/blog/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>interview</title>
+    <link>https://lindseyyzhang.github.io/tags/interview/</link>
+    <pubDate>Wed, 25 Oct 2023 22:47:30 &#43;0100</pubDate>
+    <author>Lanhsin</author>
+    <guid>https://lindseyyzhang.github.io/tags/interview/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>get to know myself</title>
     <link>https://lindseyyzhang.github.io/tags/get-to-know-myself/</link>
     <pubDate>Wed, 13 Sep 2023 14:19:27 &#43;0100</pubDate>
@@ -50,14 +66,6 @@
     <pubDate>Fri, 01 Sep 2023 21:10:27 &#43;0100</pubDate>
     <author>Lanhsin</author>
     <guid>https://lindseyyzhang.github.io/tags/academic-paper/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>blog</title>
-    <link>https://lindseyyzhang.github.io/tags/blog/</link>
-    <pubDate>Thu, 31 Aug 2023 23:19:27 &#43;0100</pubDate>
-    <author>Lanhsin</author>
-    <guid>https://lindseyyzhang.github.io/tags/blog/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
