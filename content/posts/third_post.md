@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin: A Peer-to-Peer Electronic Cash System"
 date: 2023-09-01T21:10:27+01:00
-draft: true
+draft: false
 categories:
 - master
 tags:
