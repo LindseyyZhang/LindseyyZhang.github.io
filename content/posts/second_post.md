@@ -1,7 +1,7 @@
 ---
 title: "Deloitte Virtual Risk Analysis Project"
 date: 2023-09-02T13:19:27+01:00
-draft: true
+draft: false
 featuredImage: "/images/deloitte.jpg"
 categories: 
 - reflection

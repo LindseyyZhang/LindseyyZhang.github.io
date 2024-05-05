@@ -1,7 +1,7 @@
 ---
 title: "Seeking Purpose: Reflections on 'Why'"
 date: 2023-09-13T14:19:27+01:00
-draft: true
+draft: false
 featuredImage: ""
 categories:
 - reflection

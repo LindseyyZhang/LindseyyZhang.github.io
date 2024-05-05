@@ -1,7 +1,7 @@
 ---
 title: "Three Days Without My Laptop"
 date: 2023-09-09T21:51:50+01:00
-draft: true
+draft: false
 categories:
 - reflection
 tags:

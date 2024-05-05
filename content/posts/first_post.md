@@ -2,7 +2,7 @@
 weight: 4
 title: "Make Blogging Great Again"
 date: 2023-08-31T23:19:27+01:00
-draft: true
+draft: flase
 featuredImage: "/images/blog.jpeg"
 categories:
 - reflection

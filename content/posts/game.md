@@ -2,7 +2,7 @@
 title: "Interview Notes"
 date: 2023-10-25T22:47:30+01:00
 featuredImage: "/images/Interview.jpeg"
-draft: true
+draft: false
 categories:
 - reflection
 tags:
