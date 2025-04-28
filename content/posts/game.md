@@ -9,7 +9,7 @@ tags:
 - blog
 - interview
 ---
-I had my second interview last Thursday. It provided me a valuable opportunity to sharpen my interview skills. The mix of excitement and nervousness was evident, but overall, this experience was better than my first interview. I succeeded in lightening the mood. I noticed positive interactions as they frequently nodded in agreement and took notes during our discussion.
+I had my second interview last Thursday. The mix of excitement and nervousness was evident, but overall, this experience was better than my first interview. I succeeded in lightening the mood. I noticed positive interactions as they frequently nodded in agreement and took notes during our discussion.
 
 ## Questions I Was Asked:
 - Self-introduction

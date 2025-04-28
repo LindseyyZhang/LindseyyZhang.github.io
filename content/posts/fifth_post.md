@@ -9,7 +9,7 @@ tags:
 - mission
 - get to know myself
 ---
-Recently, I read some articles by Simon Sinek, recommended by my mentor. My mentor encouraged me to discover my personal "Why Statement." This concept, introduced by Sinek, emphasizes the driving force behind our actions, our motivations, and our ultimate goals. In essence, it's our calling, our mission, to which we would willingly dedicate our lives.
+Recently, I read some articles by Simon Sinek, recommended by my mentor. My mentor encouraged me to discover my personal "Why Statement." This concept, introduced by Sinek, emphasizes the driving force behind our actions, our motivations, and our ultimate goals. 
 
 My mentor's "Why Statement" was deeply inspiring. Her aspiration is to inspire and empower young individuals, fostering positive change in them, and, over time, in the world at large.
 
