@@ -14,7 +14,8 @@ languageName = "English"
 hasCJKLanguage = true
 
 # default amount of posts in each pages
-paginate = 12
+[pagination]
+pagerSize = 12
 # google analytics code [UA-XXXXXXXX-X]
 googleAnalytics = ""
 # copyright description used only for seo schema
@@ -502,7 +503,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   #  privacy of the Google Analytics (replaced by params.analytics.google)
   [privacy.googleAnalytics]
     # ...
-  [privacy.twitter]
+  [privacy.x]
     enableDNT = true
   [privacy.youtube]
     privacyEnhanced = true
