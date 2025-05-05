@@ -1,5 +1,5 @@
 ---
-title: "Compliants?"
+title: "Complaints?"
 date: 2025-04-29T21:30:30+01:00
 draft: false
 categories:
