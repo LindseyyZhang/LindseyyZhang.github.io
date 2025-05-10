@@ -1,5 +1,5 @@
 ---
-title: "Complaints?"
+title: "Random piece in May"
 date: 2025-04-29T21:30:30+01:00
 draft: false
 categories:
@@ -28,6 +28,17 @@ I definitely rolled my eyes in that meeting—no idea how many caught it. In tha
 
 But here’s the thing: I don’t regret it. People should know how I feel. They need to understand that I, too, have a breaking point. And targeted rudeness? Surprisingly effective stress relief.
 
+## Piece 3: Language
+I recently met someone from the company who’s learning Mandarin—and honestly, his Mandarin is really good! At the very least, he can handle basic communication and even a bit more. Somehow, I found his progress really motivating.
 
+Language is fascinating. I recently read about the Sapir-Whorf hypothesis, which suggests that the language we speak shapes how we perceive the world. If something doesn’t exist in our language, we struggle to think about it—or may not even notice its existence at all. In a way, things we can’t describe with words might as well not exist for us.
+
+Sometimes, I have complex or abstract emotions in my mind, but words can’t capture them perfectly. The moment I try to describe them, the feeling gets distorted somehow.
+
+Language structures the world, but non-linguistic information might be closer to the truth. Maybe that’s why we have music and art—to express what language can’t fully convey.
+
+Anyway, circling back to my original thought: I want to improve my French. I had to pause my studies for two months because of an illness, but now I’m determined to pick it back up and reach a decent level before I go to Paris.
+
+And yes—I finally got my visa appointment in July! I can’t wait!
 
 
