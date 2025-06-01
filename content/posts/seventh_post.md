@@ -1,5 +1,5 @@
 ---
-title: "How to understand "wait without hope""
+title: 'How to understand "wait without hope"'
 date: 2025-06-01T22:30:30+01:00
 draft: false
 categories:
