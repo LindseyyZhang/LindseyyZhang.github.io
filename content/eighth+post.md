@@ -1,6 +1,6 @@
 ---
 title: '好事发生'
-date: 2025-06-01T22:30:30+01:00
+date: 2025-06-22T22:30:30+01:00
 draft: false
 categories:
 - dublin life piece
