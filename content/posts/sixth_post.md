@@ -5,7 +5,7 @@ draft: false
 categories:
 - Work
 tags: 
-- get to know myslef
+- get to know myself
 ---
 I was seriously ill a while back—worse than I’d ever been. It left me completely drained. But in that broken state, I started seeing life differently. 
 
