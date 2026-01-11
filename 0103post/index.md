@@ -1,0 +1,58 @@
+# Paris trip review
+
+# 巴黎三天游记
+
+---
+
+和H的巴黎旅游我居然一直没有记录！趁着明天才上班的空隙打算来浅浅记录一下我们的旅程。
+
+首先是坐飞机，发现爱尔兰航空居然还有很多领英课程我的天，it felt like a business trip..
+<p align="center">
+  <img src="/images/flight.jpg" alt="飞机上" width="300">
+</p>
+
+Airbnb定的很成功，很干净，位置也很好，靠近地铁。
+ <img src="/images/airbnb.jpg" alt="飞机上" width="300">
+
+第一天就逛了Merici,很多好看的餐具，好喜欢！！！我买了勺子和筷子，吃饭都更开心了。
+<img src="/images/Merci 1.jpg" width="300">
+<img src="/images/merci 2.jpg"  width="300">
+<img src="/images/merci 3.jpg" width="300">
+去host推荐的本地餐厅吃黄油法棍，太好吃了我的天。
+<img src="/images/baguette.jpg"  width="300">
+吃了这个好吃的Flan，开心果内陷。
+<img src="/images/pastry2.jpg"  width="300">
+<img src="/images/pastry4.jpg"  width="300">
+傍晚去了卢浮宫，说实话我并不是很激动，可能我对欧洲历史了解还是太少了,而且我也不知道它里面放的是真画还是假画。蒙娜丽莎那里可以说是人山人海，甚至都不能靠近去看。这些人拍照究竟是在拍什么呢？和蒙娜丽莎的合影有什么意义呢?
+<img src="/images/Lourve.jpg"  width="300">
+<img src="/images/Lourve2.jpg"  width="300">
+<img src="/images/Lourve4.jpg"  width="300">
+
+巴黎第一顿晚餐吃了Pho!
+<img src="/images/pho.jpg"  width="300">
+<img src="/images/pho finished.jpg"  width="300">
+
+晚上逛了逛超市，<img src="/images/grocery.jpg"  width="300">
+买了瓶白葡萄酒，还不错
+<img src="/images/drink.jpg"  width="300">
+
+第二天。
+看了橘园，好喜欢！很美，不需要太多历史知识。纯纯视觉享受。
+<img src="/images/orange.jpg"  width="300">
+巴黎最喜欢的博物馆是这个Bourse de Commerce. 里面的穹顶是环球视角，有一些现代展览，很有意思。
+<img src="/images/borde.jpg"  width="300">
+喜欢这些围绕重力、压力设计的现代装置。<img src="/images/modern art.jpg"  width="300">
+外观也很好看，<img src="/images/outside.jpg"  width="300">
+忘了这个公园叫什么了，很喜欢！！很大很开阔，春天一定很美。
+<img src="/images/park.jpg"  width="300">
+去买了好看的袋子，和这个日本店主聊了好久，她问东问西的我的天，我以为最后她会给我打折呢，结果并没有，她还问我是不是韩国人，因为我英语居然有韩国口音，我震惊。
+<img src="/images/shop.jpg"  width="300">
+<img src="/images/shop2.jpg"  width="300">
+下午吃了grave,巴斯克蛋糕，冰淇淋都很好吃，点了hojicha.
+<img src="/images/food.jpg"  width="300">
+晚上去吃了法国菜，好喜欢吃鸭腿！！！
+<img src="/images/food.jpg"  width="300">
+第三天去了凡尔赛宫，蒙马特街区，逛街。吃了同事推荐的意大利餐厅，很好吃我的天。里面有一个hidden bar叫做exit，下酒菜也很好吃。
+<img src="/images/pink mama.jpg"  width="300">
+<img src="/images/pinkmama2.jpg"  width="300">
+
