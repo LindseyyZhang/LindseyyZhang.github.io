@@ -2,4 +2,9 @@ resources/
 
 public
 
+# breathing-extension is a separate Vite project; its public/ dir holds
+# source assets (manifest.json, icons), not a Hugo build output.
+!breathing-extension/public/
+!breathing-extension/public/**
+
 .DS_Store
