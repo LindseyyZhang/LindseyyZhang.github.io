@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>🌽 玉米方块 CornTris</title>
+<style>
+  :root{
+    --husk: #4a7c3a;
+    --husk-dark: #2f5323;
+    --cob: #f5deb0;
+    --cob-dark: #e0c27a;
+    --panel: #fffaf0;
+    --ink: #4a3418;
+  }
+  *{ box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html,body{
+    margin:0; padding:0; height:100%;
+    background: radial-gradient(circle at 50% 0%, #cfeab0 0%, #8fc26b 45%, #5a9a44 100%);
+    font-family: "PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+    color: var(--ink);
+    overflow-x:hidden;
+  }
+  .wrap{
+    display:flex; flex-direction:column; align-items:center;
+    padding: 14px 10px 30px;
+    min-height:100%;
+  }
+  h1{
+    margin: 4px 0 10px;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 0 rgba(255,255,255,.5);
+    letter-spacing: 1px;
+  }
+  .subtitle{
+    margin: -6px 0 12px;
+    font-size: .8rem;
+    color: #2f4f1f;
+    opacity: .85;
+    text-align:center;
+  }
+  .game-area{
+    display:flex;
+    gap: 16px;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+  /* ---- Corn cob field ---- */
+  .cob-frame{
+    position:relative;
+    padding: 22px 14px 26px;
+    border-radius: 26px;
+    background:
+      linear-gradient(180deg, var(--husk) 0%, var(--husk-dark) 100%);
+    box-shadow: 0 10px 24px rgba(0,0,0,.25), inset 0 0 0 3px rgba(255,255,255,.15);
+  }
+  .cob-frame::before, .cob-frame::after{
+    content:"";
+    position:absolute;
+    top:-20px;
+    width: 46px; height: 60px;
+    background: linear-gradient(160deg, #6fae4c, var(--husk-dark));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.15);
+  }
+  .cob-frame::before{ left: 10px; transform: rotate(-18deg); }
+  .cob-frame::after{ right: 10px; transform: rotate(18deg); }
+  canvas#board{
+    display:block;
+    border-radius: 10px;
+    background: radial-gradient(ellipse at 50% 0%, var(--cob) 0%, var(--cob-dark) 100%);
+    box-shadow: inset 0 0 14px rgba(90,60,10,.35);
+  }
+  .side{
+    display:flex; flex-direction:column; gap: 12px;
+    width: 168px;
+  }
+  .panel{
+    background: var(--panel);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,.15);
+    border: 2px solid #e8d29a;
+  }
+  .panel h2{
+    margin: 0 0 8px;
+    font-size: .8rem;
+    color: #8a5a1e;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .stat-row{
+    display:flex; justify-content:space-between;
+    font-size: .95rem;
+    margin: 4px 0;
+  }
+  .stat-row b{ color:#c0562a; }
+  canvas#next{
+    display:block;
+    margin: 0 auto;
+    background: radial-gradient(ellipse at 50% 0%, var(--cob) 0%, var(--cob-dark) 100%);
+    border-radius: 8px;
+  }
+  button{
+    font-family: inherit;
+    cursor:pointer;
+    border:none;
+    border-radius: 10px;
+    padding: 9px 10px;
+    font-size: .85rem;
+    font-weight: 600;
+    background: linear-gradient(180deg,#ffd25c,#f2a51a);
+    color: #5a3400;
+    box-shadow: 0 3px 0 #b97a10;
+  }
+  button:active{ transform: translateY(2px); box-shadow: 0 1px 0 #b97a10; }
+  button.secondary{
+    background: linear-gradient(180deg,#bfe08a,#7fbf4f);
+    color: #1f3a10;
+    box-shadow: 0 3px 0 #4f7f2a;
+  }
+  .btn-row{ display:flex; gap:8px; }
+  .btn-row button{ flex:1; }
+  .msg{
+    text-align:center;
+    font-size: .8rem;
+    min-height: 1.4em;
+    color: #8a3a1e;
+    font-weight:600;
+  }
+  /* ---- Mobile touch controls ---- */
+  .touch-controls{
+    display:none;
+    margin-top: 14px;
+    width: 100%;
+    max-width: 360px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+  }
+  .touch-controls button{
+    font-size: 1.3rem;
+    padding: 14px 0;
+  }
+  @media (max-width: 640px){
+    .touch-controls{ display:grid; }
+    .side{ width: 100%; max-width: 360px; flex-direction: row; flex-wrap: wrap; }
+    .side .panel{ flex:1; min-width: 140px; }
+    .game-area{ flex-direction: column; align-items:center; }
+  }
+  footer{
+    margin-top: 18px;
+    font-size: .7rem;
+    color: #2f4f1f;
+    opacity: .7;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🌽 玉米方块 CornTris</h1>
+  <div class="subtitle">不同种类的玉米粒从天而降，堆在玉米芯上，集满一行就收获啦！</div>
+
+  <div class="game-area">
+    <div class="cob-frame">
+      <canvas id="board"></canvas>
+    </div>
+
+    <div class="side">
+      <div class="panel">
+        <h2>战绩</h2>
+        <div class="stat-row"><span>分数</span><b id="score">0</b></div>
+        <div class="stat-row"><span>等级</span><b id="level">1</b></div>
+        <div class="stat-row"><span>收获行数</span><b id="lines">0</b></div>
+      </div>
+      <div class="panel">
+        <h2>下一粒</h2>
+        <canvas id="next" width="96" height="96"></canvas>
+      </div>
+      <div class="panel">
+        <div class="btn-row">
+          <button id="startBtn">开始</button>
+          <button id="pauseBtn" class="secondary">暂停</button>
+        </div>
+        <div class="msg" id="msg"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="touch-controls">
+    <button id="btnLeft">◀</button>
+    <button id="btnRotate">⟳</button>
+    <button id="btnRight">▶</button>
+    <button id="btnDown">▼</button>
+    <button id="btnDrop" style="grid-column: span 4;">⤓ 直接种下</button>
+  </div>
+
+  <footer>方向键 移动 · ↑ 旋转 · 空格 直落 · P 暂停</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  const COLS = 10, ROWS = 18;
+  const boardCanvas = document.getElementById('board');
+  const ctx = boardCanvas.getContext('2d');
+  const nextCanvas = document.getElementById('next');
+  const nctx = nextCanvas.getContext('2d');
+
+  function cellSize(){
+    const maxW = Math.min(320, window.innerWidth - 60);
+    return Math.max(18, Math.floor(maxW / COLS));
+  }
+  let CELL = cellSize();
+  function sizeCanvas(){
+    CELL = cellSize();
+    boardCanvas.width = COLS * CELL;
+    boardCanvas.height = ROWS * CELL;
+  }
+  sizeCanvas();
+  window.addEventListener('resize', ()=>{ sizeCanvas(); draw(); });
+
+  // Corn kernel "flavors" - one per tetromino type
+  const KERNELS = {
+    I: { top:'#fff6c9', mid:'#ffd23f', bottom:'#e0a800', name:'甜黄玉米' },
+    O: { top:'#ffffff', mid:'#fbeecb', bottom:'#e8d1a0', name:'珍珠白玉米' },
+    T: { top:'#e9c8ff', mid:'#a86bd6', bottom:'#6f3fa0', name:'紫玉米' },
+    S: { top:'#ffe3b0', mid:'#ff9d3d', bottom:'#d9700f', name:'橙玉米' },
+    Z: { top:'#ffc9c0', mid:'#e8503d', bottom:'#a82c1e', name:'红玉米' },
+    J: { top:'#c9d9ff', mid:'#4d6fd6', bottom:'#2c3f8f', name:'蓝玉米' },
+    L: { top:'#ffd9a8', mid:'#d97a2b', bottom:'#8f4e14', name:'焦糖玉米' }
+  };
+
+  const SHAPES = {
+    I: [[0,0],[1,0],[2,0],[3,0]],
+    O: [[0,0],[1,0],[0,1],[1,1]],
+    T: [[0,0],[1,0],[2,0],[1,1]],
+    S: [[1,0],[2,0],[0,1],[1,1]],
+    Z: [[0,0],[1,0],[1,1],[2,1]],
+    J: [[0,0],[0,1],[1,1],[2,1]],
+    L: [[2,0],[0,1],[1,1],[2,1]]
+  };
+  const TYPES = Object.keys(SHAPES);
+
+  function rotateCells(cells){
+    // rotate 90deg clockwise around a computed pivot, then normalize
+    const maxX = Math.max(...cells.map(c=>c[0]));
+    const maxY = Math.max(...cells.map(c=>c[1]));
+    const size = Math.max(maxX, maxY);
+    let rotated = cells.map(([x,y]) => [size - y, x]);
+    // normalize to start at 0,0
+    const minX = Math.min(...rotated.map(c=>c[0]));
+    const minY = Math.min(...rotated.map(c=>c[1]));
+    return rotated.map(([x,y])=>[x-minX, y-minY]);
+  }
+
+  function randomType(){ return TYPES[Math.floor(Math.random()*TYPES.length)]; }
+
+  function newPiece(type){
+    return { type, cells: SHAPES[type].map(c=>c.slice()), x: 3, y: -1 };
+  }
+
+  let grid = createGrid();
+  function createGrid(){
+    const g = [];
+    for(let r=0;r<ROWS;r++) g.push(new Array(COLS).fill(null));
+    return g;
+  }
+
+  let current = null;
+  let nextType = randomType();
+  let score = 0, level = 1, lines = 0;
+  let dropInterval = 800;
+  let dropTimer = 0;
+  let lastTime = 0;
+  let running = false;
+  let paused = false;
+  let gameOver = false;
+  let clearingRows = [];
+  let clearFlashTimer = 0;
+  let rafId = null;
+
+  const scoreEl = document.getElementById('score');
+  const levelEl = document.getElementById('level');
+  const linesEl = document.getElementById('lines');
+  const msgEl = document.getElementById('msg');
+
+  function absCells(p){
+    return p.cells.map(([cx,cy]) => [p.x+cx, p.y+cy]);
+  }
+
+  function collides(p, dx=0, dy=0, cells=null){
+    const test = (cells || p.cells).map(([cx,cy]) => [p.x+cx+dx, p.y+cy+dy]);
+    for(const [x,y] of test){
+      if(x < 0 || x >= COLS || y >= ROWS) return true;
+      if(y >= 0 && grid[y][x]) return true;
+    }
+    return false;
+  }
+
+  function spawn(){
+    current = newPiece(nextType);
+    nextType = randomType();
+    drawNext();
+    if(collides(current)){
+      endGame();
+    }
+  }
+
+  function lockPiece(){
+    for(const [x,y] of absCells(current)){
+      if(y >= 0) grid[y][x] = current.type;
+    }
+    findAndClearLines();
+    spawn();
+  }
+
+  function findAndClearLines(){
+    const full = [];
+    for(let r=0;r<ROWS;r++){
+      if(grid[r].every(cell => cell)) full.push(r);
+    }
+    if(full.length){
+      clearingRows = full;
+      clearFlashTimer = 220; // ms flash before removing
+      const gained = [0, 100, 300, 500, 800][full.length] * level;
+      score += gained;
+      lines += full.length;
+      const newLevel = 1 + Math.floor(lines / 8);
+      if(newLevel !== level){
+        level = newLevel;
+        dropInterval = Math.max(120, 800 - (level-1)*70);
+      }
+      updateStats();
+    }
+  }
+
+  function applyClear(){
+    if(!clearingRows.length) return;
+    const remaining = grid.filter((_, r) => !clearingRows.includes(r));
+    const removedCount = clearingRows.length;
+    grid = new Array(removedCount).fill(null).map(()=> new Array(COLS).fill(null)).concat(remaining);
+    clearingRows = [];
+  }
+
+  function updateStats(){
+    scoreEl.textContent = score;
+    levelEl.textContent = level;
+    linesEl.textContent = lines;
+  }
+
+  function move(dx){
+    if(!current || gameOver || paused) return;
+    if(!collides(current, dx, 0)) current.x += dx;
+    draw();
+  }
+
+  function softDrop(){
+    if(!current || gameOver || paused) return;
+    if(!collides(current, 0, 1)){
+      current.y += 1;
+      score += 1;
+      updateStats();
+    } else {
+      lockPiece();
+    }
+    dropTimer = 0;
+    draw();
+  }
+
+  function hardDrop(){
+    if(!current || gameOver || paused) return;
+    let dist = 0;
+    while(!collides(current, 0, 1)){ current.y += 1; dist++; }
+    score += dist * 2;
+    updateStats();
+    lockPiece();
+    dropTimer = 0;
+    draw();
+  }
+
+  function rotate(){
+    if(!current || gameOver || paused) return;
+    if(current.type === 'O') return;
+    const rotated = rotateCells(current.cells);
+    const kicks = [0, -1, 1, -2, 2];
+    for(const k of kicks){
+      if(!collides(current, k, 0, rotated)){
+        current.cells = rotated;
+        current.x += k;
+        draw();
+        return;
+      }
+    }
+  }
+
+  function endGame(){
+    gameOver = true;
+    running = false;
+    msgEl.textContent = '玉米芯堆满啦！游戏结束，点“开始”重新种玉米';
+  }
+
+  function togglePause(){
+    if(!running || gameOver) return;
+    paused = !paused;
+    msgEl.textContent = paused ? '已暂停' : '';
+  }
+
+  function resetGame(){
+    grid = createGrid();
+    score = 0; level = 1; lines = 0;
+    dropInterval = 800;
+    gameOver = false;
+    paused = false;
+    clearingRows = [];
+    nextType = randomType();
+    updateStats();
+    msgEl.textContent = '';
+    spawn();
+  }
+
+  function startGame(){
+    if(running && !gameOver){ return; }
+    resetGame();
+    running = true;
+    lastTime = performance.now();
+    if(rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(loop);
+  }
+
+  function loop(t){
+    const dt = t - lastTime;
+    lastTime = t;
+    if(running && !gameOver){
+      if(clearingRows.length){
+        clearFlashTimer -= dt;
+        if(clearFlashTimer <= 0) applyClear();
+      } else if(!paused){
+        dropTimer += dt;
+        if(dropTimer >= dropInterval){
+          dropTimer = 0;
+          if(!collides(current, 0, 1)){
+            current.y += 1;
+          } else {
+            lockPiece();
+          }
+        }
+      }
+      draw();
+    }
+    rafId = requestAnimationFrame(loop);
+  }
+
+  // ---------- Rendering: draw each filled cell as a corn kernel ----------
+  function drawKernel(c, x, y, size, flashing){
+    const cx = x + size/2, cy = y + size/2;
+    const rw = size*0.44, rh = size*0.5;
+    ctx.save();
+    ctx.translate(cx, cy);
+    const grad = ctx.createLinearGradient(0, -rh, 0, rh);
+    if(flashing){
+      grad.addColorStop(0, '#fff8d0');
+      grad.addColorStop(1, '#fff0a0');
+    } else {
+      grad.addColorStop(0, c.top);
+      grad.addColorStop(0.55, c.mid);
+      grad.addColorStop(1, c.bottom);
+    }
+    ctx.beginPath();
+    ctx.ellipse(0, 0, rw, rh, 0, 0, Math.PI*2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+    ctx.lineWidth = Math.max(1, size*0.04);
+    ctx.strokeStyle = 'rgba(90,50,10,0.35)';
+    ctx.stroke();
+    // little crease highlight
+    ctx.beginPath();
+    ctx.moveTo(-rw*0.15, -rh*0.6);
+    ctx.quadraticCurveTo(0, 0, -rw*0.15, rh*0.6);
+    ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+    ctx.lineWidth = Math.max(1, size*0.03);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawEmptyCob(x, y, size){
+    const cx = x + size/2, cy = y + size/2;
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, size*0.32, size*0.38, 0, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(150,110,40,0.25)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,boardCanvas.width, boardCanvas.height);
+    for(let r=0;r<ROWS;r++){
+      for(let c=0;c<COLS;c++){
+        const x = c*CELL, y = r*CELL;
+        if(grid[r][c]){
+          drawKernel(KERNELS[grid[r][c]], x, y, CELL, clearingRows.includes(r));
+        } else {
+          drawEmptyCob(x, y, CELL);
+        }
+      }
+    }
+    if(current && !gameOver){
+      const k = KERNELS[current.type];
+      for(const [x,y] of absCells(current)){
+        if(y >= 0) drawKernel(k, x*CELL, y*CELL, CELL, false);
+      }
+    }
+    // grid lines (subtle)
+    ctx.strokeStyle = 'rgba(120,80,20,0.08)';
+    for(let c=1;c<COLS;c++){
+      ctx.beginPath(); ctx.moveTo(c*CELL,0); ctx.lineTo(c*CELL, ROWS*CELL); ctx.stroke();
+    }
+    for(let r=1;r<ROWS;r++){
+      ctx.beginPath(); ctx.moveTo(0,r*CELL); ctx.lineTo(COLS*CELL, r*CELL); ctx.stroke();
+    }
+
+    if(gameOver){
+      ctx.fillStyle = 'rgba(40,20,0,0.55)';
+      ctx.fillRect(0,0,boardCanvas.width, boardCanvas.height);
+      ctx.fillStyle = '#fff2c9';
+      ctx.font = `bold ${Math.max(14,CELL*0.7)}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText('🌽 收获结束 🌽', boardCanvas.width/2, boardCanvas.height/2);
+    } else if(paused){
+      ctx.fillStyle = 'rgba(40,20,0,0.4)';
+      ctx.fillRect(0,0,boardCanvas.width, boardCanvas.height);
+      ctx.fillStyle = '#fff2c9';
+      ctx.font = `bold ${Math.max(14,CELL*0.7)}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText('暂停中', boardCanvas.width/2, boardCanvas.height/2);
+    }
+  }
+
+  function drawNext(){
+    nctx.clearRect(0,0,nextCanvas.width, nextCanvas.height);
+    const k = KERNELS[nextType];
+    const cells = SHAPES[nextType];
+    const size = 20;
+    const maxX = Math.max(...cells.map(c=>c[0]));
+    const maxY = Math.max(...cells.map(c=>c[1]));
+    const offX = (nextCanvas.width - (maxX+1)*size)/2;
+    const offY = (nextCanvas.height - (maxY+1)*size)/2;
+    const savedCtx = ctx;
+    // temporarily swap ctx target by drawing directly with nctx-compatible calls
+    for(const [cx,cy] of cells){
+      drawKernelOn(nctx, k, offX+cx*size, offY+cy*size, size);
+    }
+  }
+
+  function drawKernelOn(targetCtx, c, x, y, size){
+    const cx = x + size/2, cy = y + size/2;
+    const rw = size*0.44, rh = size*0.5;
+    targetCtx.save();
+    targetCtx.translate(cx, cy);
+    const grad = targetCtx.createLinearGradient(0, -rh, 0, rh);
+    grad.addColorStop(0, c.top);
+    grad.addColorStop(0.55, c.mid);
+    grad.addColorStop(1, c.bottom);
+    targetCtx.beginPath();
+    targetCtx.ellipse(0, 0, rw, rh, 0, 0, Math.PI*2);
+    targetCtx.fillStyle = grad;
+    targetCtx.fill();
+    targetCtx.lineWidth = 1;
+    targetCtx.strokeStyle = 'rgba(90,50,10,0.35)';
+    targetCtx.stroke();
+    targetCtx.restore();
+  }
+
+  // ---------- Controls ----------
+  document.addEventListener('keydown', (e)=>{
+    if(!running || gameOver){
+      if(e.code === 'Space' || e.code === 'Enter') startGame();
+      return;
+    }
+    switch(e.code){
+      case 'ArrowLeft': move(-1); e.preventDefault(); break;
+      case 'ArrowRight': move(1); e.preventDefault(); break;
+      case 'ArrowDown': softDrop(); e.preventDefault(); break;
+      case 'ArrowUp': rotate(); e.preventDefault(); break;
+      case 'Space': hardDrop(); e.preventDefault(); break;
+      case 'KeyP': togglePause(); break;
+    }
+  });
+
+  document.getElementById('startBtn').addEventListener('click', startGame);
+  document.getElementById('pauseBtn').addEventListener('click', togglePause);
+  document.getElementById('btnLeft').addEventListener('click', ()=>move(-1));
+  document.getElementById('btnRight').addEventListener('click', ()=>move(1));
+  document.getElementById('btnRotate').addEventListener('click', rotate);
+  document.getElementById('btnDown').addEventListener('click', softDrop);
+  document.getElementById('btnDrop').addEventListener('click', hardDrop);
+
+  // simple swipe support on the board
+  let touchStartX=null, touchStartY=null, touchMoved=false;
+  boardCanvas.addEventListener('touchstart', (e)=>{
+    const t = e.touches[0];
+    touchStartX = t.clientX; touchStartY = t.clientY; touchMoved=false;
+  }, {passive:true});
+  boardCanvas.addEventListener('touchmove', (e)=>{
+    if(touchStartX===null) return;
+    const t = e.touches[0];
+    const dx = t.clientX - touchStartX, dy = t.clientY - touchStartY;
+    if(Math.abs(dx) > CELL*0.8){
+      move(dx > 0 ? 1 : -1);
+      touchStartX = t.clientX;
+      touchMoved = true;
+    } else if(dy > CELL*1.2){
+      softDrop();
+      touchStartY = t.clientY;
+      touchMoved = true;
+    }
+  }, {passive:true});
+  boardCanvas.addEventListener('touchend', ()=>{
+    if(!touchMoved) rotate();
+    touchStartX = null; touchStartY = null;
+  });
+
+  // initial idle render
+  spawn();
+  draw();
+  drawNext();
+  msgEl.textContent = '点击"开始"，让玉米粒落下吧！';
+})();
+</script>
+</body>
+</html>

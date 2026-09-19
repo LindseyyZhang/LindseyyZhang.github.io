@@ -66,6 +66,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     name = "Categories"
     url = "/categories/"
     title = ""
+  [[menu.main]]
+    weight = 4
+    identifier = "corntris"
+    pre = ""
+    post = ""
+    name = "🌽 CornTris"
+    url = "/corntris/"
+    title = "玉米方块小游戏"
 
 [params]
   # site default theme ["auto", "light", "dark"]
